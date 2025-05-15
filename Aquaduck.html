@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Duck - Making a Splash on the Web!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Comic Neue', cursive;
+            background-color: #181818;
+            color: #afafaf;
+            margin: 0;
+            padding: 0;
+            cursor: url('duck-cursor.png'), auto;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(180deg, #08afa0 0%, #0a8c89 100%);
+            color: #181818;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+        nav {
+            background-color: #0a8c89;
+        }
+        nav a {
+            color: #181818;
+            background-color: #08afa0;
+        }
+        nav a:hover {
+            background-color: #0a8c89;
+        }
+        .section-title {
+            color: #08afa0;
+            border-bottom: 3px dashed #08afa0;
+        }
+        .action-btn {
+            background-color: #9e521c;
+            color: #181818;
+        }
+        footer {
+            background-color: #08afa0;
+            color: #181818;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            .logo {
+                font-size: 1.5rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="ripple-canvas"></canvas>
+    
+    <header>
+        <h1 class="logo">Aqua Duck</h1>
+        <p class="tagline">Making a Splash on the Web!</p>
+    </header>
+    
+    <nav>
+        <a href="#quackground" class="nav-icon" data-sound="quack1"><span>🏠</span> Home</a>
+        <a href="#waddle" class="nav-icon" data-sound="quack2"><span>🥽</span> Products</a>
+        <a href="#duck-dive" class="nav-icon" data-sound="quack3"><span>🍀</span> Deals</a>
+        <a href="#feathered" class="nav-icon" data-sound="quack4"><span>ℹ️</span> About</a>
+    </nav>
+    
+    <section id="quackground">
+        <h2 class="section-title">Quackground Info</h2>
+        <p>Welcome to Aqua Duck, where we're quackers about making your web experience splash-tacular! Founded in 2023 by a team of web-loving mallards, we combine technical excellence with pure fowl play. We believe in working hard, playing hard, and swimming harder.</p>
+        <button class="action-btn" id="duck-btn">Create Your Duck Avatar</button>
+        <div id="duck-avatar-container"></div>
+    </section>
+    
+    <section id="waddle">
+        <h2 class="section-title">Waddle We Do?</h2>
+        <div class="service">
+            <h3>Web Design</h3>
+            <p>From simple splash pages to full-featured floating fortresses, we can build whatever floats your boat!</p>
+            <button class="action-btn">Paddle In</button>
+        </div>
+        <div class="service">
+            <h3>SEO Services</h3>
+            <p>Let us help you swim to the top of search results. No diving required!</p>
+            <button class="action-btn">Make a Splash</button>
+        </div>
+        <div class="service">
+            <h3>Content Creation</h3>
+            <p>Need content that doesn't quack under pressure? We've got you covered!</p>
+            <button class="action-btn">Feed the Ducks</button>
+        </div>
+    </section>
+    
+    <section id="duck-dive">
+        <h2 class="section-title">Duck Dive Deals</h2>
+        <div class="promo-card">
+            <h3>The Early Bird Special</h3>
+            <p>Book before noon and get 20% off any service. Don't delay or you'll be left in the wake!</p>
+            <button class="action-btn">Catch This Wave</button>
+        </div>
+        <div class="promo-card">
+            <h3>Duck of the Month Club</h3>
+            <p>Subscribe for monthly duck-themed surprises delivered right to your pond!</p>
+            <button class="action-btn">Join the Flock</button>
+        </div>
+        <button id="bread-btn" class="action-btn">Feed Me Breadcrumbs!</button>
+        <div id="bread-animation"></div>
+    </section>
+    
+    <section id="feathered">
+        <h2 class="section-title">Feathered Feedback</h2>
+        <div class="testimonial">
+            <p>"Aqua Duck transformed my website from a sinking ship to a floating palace. Now I'm the big duck in town!"</p>
+            <p><em>- Mallory, Quackery Inc.</em></p>
+        </div>
+        <div class="testimonial">
+            <p>"Their team worked tirelessly until everything was ducky. I'm so glad I took the plunge!"</p>
+            <p><em>- Howard, PondScape</em></p>
+        </div>
+    </section>
+    
+    <footer>
+        <p> 2023 Aqua Duck - Not responsible for excessive quacking or water-based puns</p>
+        <p>Got questions? <a href="mailto:quack@aquaduck.web" style="color:#ffeb3b;">Drop us a line!</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
